@@ -100,7 +100,7 @@ img {
 .mobile {
   width: 250px;
   height: 500px;
-  background: var(--app-bg);
+  background: hsl(270, 20%, 96%);
   border: 10px solid var(--white);
   border-radius: 30px;
   overflow: hidden;
