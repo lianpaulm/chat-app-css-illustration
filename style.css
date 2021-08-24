@@ -35,7 +35,7 @@
 
   /* Secondary */
   --white: hsl(0, 0%, 100%);
-  --app-bg: hsl(270, 20%, 96%); /*(app background)*/
+  --app-bg: hsl(0, 0%, 100%); /*(app background)*/
   --submit-btn-bg: hsl(271, 36%, 24%); /*(submit button background)*/
   --radio-btn-outline: hsl(289, 100%, 72%); /*(radio button outline)*/
 }
