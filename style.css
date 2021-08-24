@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  /* Text */
+  --sub-heading-c: hsl(
+    276,
+    100%,
+    81%
+  ); /*(sub-heading at the top of the app UI)*/
+  --chat-left-c: hsl(276, 55%, 52%); /*(chat on the left)*/
+  --chat-right-c: hsl(271, 15%, 43%); /*(chat on the right)*/
+  --placeholder-text-c: hsl(206, 6%, 79%); /*(placeholder text)*/
+  --main-heading-c: hsl(271, 36%, 24%); /*(main heading)*/
+  --paragraph-c: hsl(270, 7%, 64%); /*(paragraph)*/
+
+  /* Gradients */
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+  /* --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%); */
+  --gradient-bg-to-left: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  --gradient-bg-to-right: linear-gradient(
+    to left,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  --gradient-bg-to-bottom: linear-gradient(
+    to bottom,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+
+  /* Secondary */
+  --white: hsl(0, 0%, 100%);
+  --app-bg: hsl(270, 20%, 96%); /*(app background)*/
+  --submit-btn-bg: hsl(271, 36%, 24%); /*(submit button background)*/
+  --radio-btn-outline: hsl(289, 100%, 72%); /*(radio button outline)*/
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/* simple-booking section */
+.wrapper {
+  background: var(--app-bg);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.simple-booking {
+  padding: 60px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* background ovarlay */
+.semi-circle {
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  z-index: -1;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+}
+.semi-circle-colored {
+  background: var(--gradient-bg-to-bottom);
+  top: 0;
+  left: 0;
+  transform: translate(-63%, -30%);
+}
+.semi-circle-normal {
+  background: rgba(199, 163, 253, 0.1);
+  right: 0;
+  bottom: 0;
+  transform: rotateX(180deg) translate(63%, -30%);
+}
+/* mobile */
+.mobile {
+  width: 250px;
+  height: 500px;
+  background: var(--app-bg);
+  border: 10px solid var(--white);
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 3px 3px 15px 2px rgba(122, 120, 120, 0.25);
+}
+.mobile-heading {
+  position: relative;
+  background: var(--gradient-bg-to-left);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 12px 11px;
+  gap: 8px;
+  border-radius: 0 0 5px 5px;
+}
+.mobile-heading:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 18px;
+  background: var(--white);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.arrow-left {
+  position: relative;
+}
+.arrow-left::before {
+  content: '';
+  top: -5px;
+  left: 0px;
+  width: 2px;
+  height: 6px;
+  background: var(--white);
+  position: absolute;
+  transform: skew(-28deg, 0deg);
+}
+.arrow-left::after {
+  content: '';
+  top: 0px;
+  left: 0px;
+  width: 2px;
+  height: 6px;
+  background: var(--white);
+  position: absolute;
+  transform: skew(28deg, 0deg);
+}
+.avatar {
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+}
+.user-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+}
+.user-status {
+  color: var(--sub-heading-c);
+  font-size: 8px;
+}
+.dot-menu {
+  height: 2px;
+  width: 2px;
+  background: var(--white);
+  margin-left: auto;
+  position: relative;
+  border-radius: 50%;
+}
+.dot-menu::before {
+  content: '';
+  height: 2px;
+  width: 2px;
+  background: inherit;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  border-radius: 50%;
+}
+.dot-menu::after {
+  content: '';
+  height: 2px;
+  width: 2px;
+  background: inherit;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  border-radius: 50%;
+}
+/* mobile body */
+.mobile-body {
+  padding: 10px;
+  font-size: 8px;
+}
+.chat {
+  padding: 7px;
+  margin-bottom: 8px;
+  max-width: 60%;
+}
+.chat-left {
+  background: hsl(278, 86%, 95%);
+  color: var(--chat-left-c);
+  border-radius: 10px 10px 10px 3px;
+}
+.chat-right {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.chat-right > div {
+  background: var(--white);
+  color: var(--chat-right-c);
+  border-radius: 10px 10px 3px 10px;
+}
+.chat-right > div:not(:first-child) {
+  box-shadow: 0 0.5px 1px 0.5px rgba(99, 99, 99, 0.05);
+}
+.chat-right > div:last-child {
+  margin-bottom: 0;
+}
+.dogs {
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  width: 40px;
+  gap: 5px;
+  padding: 0;
+  text-align: right;
+  background: none;
+}
+.dogs > * {
+  border-radius: 10px;
+}
+.offer {
+  background: var(--gradient-bg-to-right);
+  color: var(--white);
+  max-width: 75%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.offer-btn {
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid var(--radio-btn-outline);
+  border-radius: 50%;
+  background: transparent;
+  margin-right: 7px;
+}
+.price {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.message-input {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.input {
+  border: none;
+  width: 100%;
+  font-size: 10px;
+  color: var(--placeholder-text-c);
+  font-family: 'Rubik', sans-serif;
+  height: 30px;
+  padding: 0 20px;
+  border-radius: 50px;
+  position: relative;
+  outline: none;
+}
+.send {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  outline: none;
+  border: none;
+  background: var(--submit-btn-bg);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.send i {
+  color: var(--white);
+}
+
+/* booking text */
+.booking-text {
+  margin-top: 70px;
+  text-align: center;
+}
+.booking-text h1 {
+  font-size: 40px;
+  color: var(--main-heading-c);
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+.booking-text p {
+  color: var(--paragraph-c);
+  line-height: 1.6;
+}
+
+/* responsive design */
+@media screen and (min-width: 780px) {
+  .simple-booking {
+    flex-direction: row;
+    padding: 0 35px;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  .simple-booking > div {
+    flex-basis: 50%;
+  }
+  .mobile-container {
+    display: flex;
+    justify-content: center;
+  }
+  .booking-text {
+    margin-top: 0;
+    text-align: unset;
+  }
+  .semi-circle-colored {
+    transform: translate(-21%, -10%);
+  }
+  .semi-circle-normal {
+    transform: rotateX(180deg) translate(40%, -15%);
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 8px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 58%, 37%);
+}
