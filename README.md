@@ -10,10 +10,10 @@ This is a solution to the [Chat app CSS illustration challenge on Frontend Mento
 
 Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-<!-- ### Links
+### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- Live Site URL: https://lpdesign-chat-app-css-illustration.netlify.app
 
 ### Built with
 
@@ -21,8 +21,8 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 - Flexbox
 - Mobile-first workflow
 
-## Author
+## My profile at Frontend Mentor
 
 <!-- - Website - [Add your name here](https://www.your-site.com) -->
 
-- Frontend Mentor - [@lianpaulm](https://www.frontendmentor.io/profile/lianpaulm)
+[@lianpaulm](https://www.frontendmentor.io/profile/lianpaulm)
